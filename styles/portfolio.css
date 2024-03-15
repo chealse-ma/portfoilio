@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #ba77be;
-  --secondary-color: #fdf2f2;
+  --primary-color: #cb8ccf;
+  --secondary-color: rgb(204, 216, 216);
   --heading-font-family: "Playfair", serif;
   --body-font-family: "Inter", sans-serif;
 }
@@ -8,12 +8,13 @@
 h1,
 h2 {
   color: var(--primary-color);
+  background-color: rgb(227, 219, 235);
 }
 
 h1 {
   font-family: var(--body-font-family);
-  font-weight: 600;
-  font-size: 100px;
+  font-weight: 550px;
+  font-size: 90px;
 }
 
 h2 {
@@ -45,8 +46,8 @@ p {
 .btn-branding:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
-  border-radius: 40px;
-  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  border: 3px solid var(--primary-color);
 }
 
 .description-block,
@@ -66,11 +67,11 @@ p {
 
 @media (max-width: 1023px) {
   .description-block {
-    padding: 50px;
+    padding: 35px;
     text-align: center;
   }
   .story-block {
-    padding: 50px;
+    padding: 35px;
     text-align: center;
   }
 }
