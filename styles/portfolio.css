@@ -1,91 +1,206 @@
 :root {
-  --primary-color: #cb8ccf;
-  --secondary-color: rgb(204, 216, 216);
-  --heading-font-family: "Playfair", serif;
-  --body-font-family: "Inter", sans-serif;
+  --branding-color: #b793ea;
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
+  --secondary-color: #f9f7fe;
 }
 
+body {
+  font-family: var(--default-font-family);
+}
 h1,
-h2 {
-  color: var(--primary-color);
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: var(--heading-font-family);
 }
 
 h1 {
-  font-family: var(--body-font-family);
-  font-weight: 550px;
-  font-size: 90px;
-  background-color: rgb(219, 230, 235);
-}
-
-h2 {
-  font-family: var(--body-font-family);
-  font-size: 20px;
-  font-weight: 300;
-}
-
-p {
+  font-size: 96px;
   line-height: 1.5;
 }
 
+h2 {
+  font-size: 62px;
+}
+
+h3 {
+  font-size: 48px;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+p.intro {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
 .hero {
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   text-align: center;
-  padding: 130px 20px;
+  padding: 80px 20px;
+}
+
+.hero p {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  color: #272142;
+}
+
+.hero h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #272142;
 }
 
 .btn-branding {
-  border-radius: 40px;
-  color: var(--primary-color);
-  background: var(--secondary-color);
-  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: var(--branding-color);
+  padding: 15px 30px;
   line-height: 27px;
-  padding: 12px 20px;
-  font-size: 15px;
+  font-size: 18px;
+  color: white;
 }
 
-.btn-branding:hover {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: 30px;
-  border: 3px solid var(--primary-color);
+.btn-branding-outline {
+  border-radius: 4px;
+  padding: 15px 30px;
+  line-height: 27px;
+  font-size: 18px;
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
 }
 
-.description-block,
-.story-block {
-  padding: 170px 40px 100px;
+.project-description {
+  padding: 0 40px;
 }
 
-.right-arch {
-  border-top-right-radius: 400px;
-  border-bottom-right-radius: 400px;
-}
-
-.left-arch {
-  border-top-left-radius: 400px;
-  border-bottom-left-radius: 400px;
-}
-
-@media (max-width: 1023px) {
-  .description-block {
-    padding: 35px;
+@media (max-width: 992px) {
+  .project-description {
+    padding: 0;
     text-align: center;
   }
-  .story-block {
-    padding: 35px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 641px) {
   h1 {
-    font-size: 40px;
+    font-size: 44px;
   }
-  .description-block {
-    padding: 50px 0px;
+  h2 {
+    font-size: 44px;
+  }
+  .hero {
+    padding: 80px 20px;
+  }
+  .content {
     text-align: center;
+    padding: 0;
   }
-  .story-block {
-    padding: 50px 0px;
-    text-align: center;
+  h3 {
+    font-size: 18px;
   }
+}
+
+.content h1 {
+  font-size: 64px;
+  line-height: 80px;
+  padding-bottom: 30px;
+}
+
+.content h2 {
+  font-size: 18px;
+  font-family: var(--default-font-family);
+}
+
+.content h3 {
+  font-size: 24px;
+  font-family: var(--default-font-family);
+  line-height: 1.5;
+  margin: 20px 0 0;
+}
+
+.content p {
+  font-size: 14px;
+}
+.content-container {
+  padding: 60px 20px;
+}
+.content {
+  margin: 30px;
+}
+
+.logo {
+  max-width: 150px;
+  max-height: 41.82px;
+}
+
+nav ul {
+  padding: 0;
+}
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 15px;
+}
+
+nav {
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #574b90;
+  transition: all 150ms ease-in-out;
+}
+nav a:hover,
+nav li.active a {
+  color: var(--branding-color);
+}
+.active {
+  color: var(--branding-color);
+}
+footer {
+  margin: 60px 0;
+}
+
+footer .contact-box {
+  background: var(--secondary-color);
+  padding: 30px 120px;
+}
+
+footer .contact-box p {
+  margin: 0;
+}
+
+footer .email-link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+
+footer .socials a {
+  margin: 0 20px;
+  color: var(--branding-color);
+  background-color: var(--secondary-color);
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 100ms ease-in-out;
+}
+footer .socials a:hover {
+  color: white;
+  background-color: var(--branding-color);
 }
